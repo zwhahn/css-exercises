@@ -35,7 +35,7 @@ button {
   top: 50%;
   left: 50%;
   transform-origin: center;
-  transform: translate(-50%, -50%);
+  /* transform: translate(-50%, -50%); */
   pointer-events: none;
   opacity: 0%;
   text-align: center;
@@ -56,8 +56,16 @@ button {
 .popup-modal.show {
   opacity: 100%;
   pointer-events: all;
+  transform: translate(-50%, -50%);
 }
 
 .backdrop.show {
   opacity: 30%;
+}
+
+.popup-modal {
+  transform: translate(-50%, -100%);
+  transition:
+    transform ease-in 1s,
+    opacity ease-in 1s;
 }
